@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}Django</title>
+    <link rel="stylesheet" href="/site_media/css/index/index.css">
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+    {% block css %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>
+<script src="/site_media/js/sea.js"></script>
+<script src="/site_media/js/script-config.js"></script>
+{% block js %}{% endblock %}
