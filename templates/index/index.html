@@ -4,9 +4,38 @@
 {% endblock %}
 {% block css %}
     {# 这里可以引入css #}
+    <link rel="stylesheet" href="/site_media/css/index/index.css">
 {% endblock %}
 
 {% block body %}
+    <div class="user_info">
+        账号：<input type="text" placeholder="请输入账号" id="username" name="username"><br/>
+        密码：<input type="password" placeholder="请输入密码" id="password" name="password">
+    </div>
+    {% if user == 'mx' %}
+         <div id="btn" class="btn">
+            <button>
+                登录
+            </button>
+         </div>
+    {% endif %}
+    {# 数组遍历 #}
+    <ul>
+        {% for item in list %}
+            <li>{{ item.name }}</li>
+        {% endfor %}
+    </ul>
 
 
+    {# ifequal/ifnotequal 标签 #}
+    {% ifequal user 'mx' %}
+        <h1>equal测试</h1>
+    {% endifequal %}
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        seajs.use('index/login.js')
+    </script>
 {% endblock %}

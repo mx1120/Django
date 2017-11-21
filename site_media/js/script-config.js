@@ -1,5 +1,6 @@
 (function(){
-    var address = location.href.indexOf('debug=true') > 0 ? 'js' : 'js';
+    // var address = location.href.indexOf('debug=true') > 0 ? 'js' : 'js';
+    var address = 'js';
     var version = (+ new Date())
     //JS，css后面加上version可以在一定程度上防止缓存
     seajs.config({

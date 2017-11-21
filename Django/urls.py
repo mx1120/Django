@@ -23,5 +23,5 @@ urlpatterns = patterns('',
 					   )
 
 urlpatterns += patterns('',
-					   (r'', include('Django.login.urls'))
+					   (r'^', include('Django.login.urls'))
 					   )
